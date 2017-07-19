@@ -21,5 +21,8 @@
 /yarn-error.log
 
 vendor
+*~
+*.swp
+*.swo
 
 .byebug_history
