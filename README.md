@@ -1,24 +1,54 @@
-# README
+# Rails Sample
+Code for learning Ruby on Rails.  
+Followed the instruction [here](https://openbook4.me/projects/92).
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+Install version management tool if not installed.
+```bash
+brew install rbenv
+```
 
-* Ruby version
+Find available versions.
+```bash
+rbenv install -l
+```
 
-* System dependencies
+Install the latest version.
+```bash
+rbenv install 2.4.1
+```
 
-* Configuration
+Set the version to the project directory.
+```bash
+rbenv local 2.4.1
+```
 
-* Database creation
+Install `bundler` by
+```bash
+gem install bundler
+```
 
-* Database initialization
+## Install modules
+```bash
+bundle install --path vendor/bundle
+```
 
-* How to run the test suite
+## Database migration
+Migrate database by
+```bash
+bundle exec rake db:migrate
+```
+By putting `bundle exec`, the subsequent command refers to locally installed gems.  
 
-* Services (job queues, cache servers, search engines, etc.)
+Create seed records written in db/seeds.rb by
+```bash
+bundle exec rake db:seed
+```
 
-* Deployment instructions
+## Launch server
+Launch server by
+```bash
+bundle exec rails s
+```
 
-* ...
